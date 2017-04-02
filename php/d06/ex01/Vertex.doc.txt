@@ -1,0 +1,19 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class points in space.
+
+An instance can be constructed with only the x, y and z points:
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+Or with the two optional attributes w, and color:
+
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'w' => 2.0, 'color' => $green) );
+
+The color attribute must be a instance of the Color class.
+If not specified, the w attribute is by default 1.0.
+If not specified, teh color attribute is by default white or #ffffff.
+
+You can read/write the values with the get[X]() and set[X](value) functions:
+$vertex->setY(5.00);
+$x = $vertex->getX();
+---------------------------------------------------------------------- Vertex ->

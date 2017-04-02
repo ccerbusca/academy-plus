@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <form method="get">
+        <input type="text" name="first">
+        <select name="sign" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" name="second"> <br />
+        <button type="submit" value="Try me!">Try me!</button>
+    </form>
+
+    <script>
+        setInterval(function(){ alert("Please, use me..."); }, 30000);
+        function getSearchParameters() {
+            var prmstr = window.location.search.substr(1);
+            return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+        }
+
+        function transformToAssocArray( prmstr ) {
+            var params = {};
+            var prmarr = prmstr.split("&");
+            for ( var i = 0; i < prmarr.length; i++) {
+                var tmparr = prmarr[i].split("=");
+                params[tmparr[0]] = tmparr[1];
+            }
+            return params;
+        }
+        function isInt(value) {
+            return !isNaN(value) && (function(x) { return (x | 0) === x; })(parseFloat(value))
+        }
+        function do_op(param){
+            var k;
+            var err = 0;
+            var op1 = parseInt(param['first']);
+            var op2 = parseInt(param['second']);
+            var sign = param['sign'];
+            if (sign == "%2B")
+                    k = op1 + op2;
+            else if (sign == "-")
+                    k = op1 - op2;
+            else if (sign == "*")
+                    k = op1 * op2;
+            else if (sign == "%2F") {
+                if (op2 == 0)
+                        err = 1;
+                else k = op1 / op2;
+            }
+            else if (sign == "%25") {
+                if (op2 == 0)
+                    err = 1;
+                else k = op1 % op2;
+            }
+            if (params['first'] != "" && params['second'] != "" && window.location.search != "") {
+                if (err == 0)
+                    console.log(k);
+                else {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                }
+            }
+        }
+        var erro = 0;
+        var params = getSearchParameters();
+        if (!isInt(params['first']) || !isInt(params['second'])
+                || parseInt(params['first']) < 0 || parseInt(params['second']) < 0)
+        {
+            if (params['first'] != "" && params['second'] != "" && window.location.search != "") {
+                erro = 1;
+                alert("Error :(");
+            }
+        }
+        if (params['first'] != "" && params['second'] != "" && erro == 0)
+            do_op(params);
+    </script>
+</body>
+</html>

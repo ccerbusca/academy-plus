@@ -1,0 +1,65 @@
+body {
+    background: #1d1d1d;
+}
+
+#elem { }
+#elem ul { list-style:none; text-align:center; border-top:1px solid #eee; border-bottom:1px solid #eee; padding:10px 0; }
+#elem ul li { display:inline; text-transform:uppercase; padding:0 10px;}
+#elem ul li a { text-decoration:none; color:#eee; }
+#elem ul li a:hover { text-decoration:underline; }
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+#accordion input[name=accordion-level-1]:not(:checked) + div { display: none; }
+#accordion input[name=accordion-level-1]:checked + div { display: block; }
+#accordion input[name=accordion-level-1] { width: 0px; height: 0px; margin: 0px; opacity: 0.0; }
+#accordion label { cursor: pointer; }
+
+#colori {
+    color:red;
+}
+
+#colori1 {
+    color:yellow;
+}
+
+#colori2 {
+    color:orange;
+}

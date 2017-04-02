@@ -1,0 +1,188 @@
+body {
+    background-color: #696969;
+    /*background-image: url("resources/doft.jpg");*/
+}
+
+div.image {
+    width: inherit;
+    height: inherit;
+    background-image: url("resources/day_of_the_42.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 500px;
+}
+
+img.img0 {
+    margin:auto;
+    width:auto;
+    top: 20px;
+    left: 1369px;
+    position: absolute;
+    display: block;
+}
+
+img.img1 {
+    margin:auto;
+    width:20px;
+    top: 120px;
+    right: 260px;
+    position: absolute;
+    display: block;
+}
+
+img.img2 {
+    margin:auto;
+    width:20px;
+    top: 20px;
+    right: 260px;
+    position: absolute;
+    display: block;
+}
+
+img.img3 {
+    margin:auto;
+    width:80px;
+    left: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+img.img4 {
+    margin:auto;
+    width:80px;
+    left: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+img.img5 {
+    border: 5px solid red;
+    border-radius: 4px;
+    margin:auto;
+    width:80px;
+    left: 25px;
+    position: relative;;
+    display: inline-block;
+}
+
+img.img6 {
+    margin:auto;
+    width:80px;
+    left: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+img.img7 {
+    margin:auto;
+    width:80px;
+    left: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+img.img8 {
+    margin:auto;
+    width:80px;
+    left: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+img.img9 {
+    margin:auto;
+    width:80px;
+    left: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+div.wall {
+    background-image: url("resources/brick.jpg");
+    height: 72px;
+}
+
+#elem {
+    border-radius: 15px;
+    background: #909090;
+    padding: 5px;
+    width: auto;
+    margin-left: 241px;
+    margin-right: 241px;
+    display: block;
+    height: 130px;
+    box-shadow: 10px 10px 5px #000000;
+}
+#elem1 {
+    border-radius: 10px;
+    background: #909090;
+    padding: 5px;
+    width: 130px;
+    left: 276px;
+    top: 170px;
+    position: absolute;
+    display: block;
+    height: 460px;
+    float: left;
+    box-shadow: 10px 10px 5px #000000;
+}
+#elem2 {
+    border-radius: 10px;
+    background: #909090;
+    padding: 5px;
+    position: absolute;
+    width: 130px;
+    left: 1505px;
+    top: 170px;
+    display: block;
+    height: 460px;
+    box-shadow: 10px 10px 5px #000000;
+}
+
+#elem3 {
+    border-radius: 10px;
+    background: #909090;
+    background-image: url("resources/cluster.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px;
+    width: 1021px;
+    position: absolute;
+    left: 446px;
+    top: 170px;
+    display: block;
+    height: 575px;
+    float:left;
+    box-shadow: 10px 10px 5px #000000;
+}
+
+#elem4 {
+    border-radius: 10px;
+    background: #17c63a;
+    padding: 5px;
+    height: 170px;
+    position: absolute;
+    top:675px;
+    left:300px;
+    width:480px;
+    display: block;
+    font-size: larger;
+    box-shadow: 10px 10px 5px #000000;
+}
+
+#custom {
+    font-size: xx-large;
+}
+
+#shad {
+    text-shadow: 4px 4px 10px #ff4500;
+}
+
+#lala {
+    height:280px;
+}
+
+#lala1 {
+    position: relative;
+    height: 285px;
+}

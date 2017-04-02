@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+</head>
+<style>
+    #ballz{
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: auto;
+        border-radius: 1000px;
+    }
+</style>
+
+<body>
+    <div id="ballz" style="width: 200px; height: 200px; background-color: red;">
+    </div>
+    <script>
+        document.getElementById("ballz").addEventListener("click", function () {
+            var k = parseInt(this.style.width);
+            var z = parseInt(this.style.height);
+            switch (this.style.backgroundColor)
+            {
+                case 'red':
+                {
+                    this.style.backgroundColor = 'green';
+                    break;
+                }
+                case 'green':
+                {
+                    this.style.backgroundColor = 'blue';
+                    break;
+                }
+                case 'blue':
+                {
+                    this.style.backgroundColor = 'red';
+                    break;
+                }
+            }
+            k += 10;
+            z += 10;
+            if (k > 420)
+            {
+                k = 200;
+                z = 200;
+            }
+            this.style.width = k + 'px';
+            this.style.height = z + 'px';
+        })
+        document.getElementById("ballz").addEventListener("mouseleave", function () {
+            var k = parseInt(this.style.width);
+            var z = parseInt(this.style.height);
+            switch (this.style.backgroundColor)
+            {
+                case 'red':
+                {
+                    this.style.backgroundColor = 'blue';
+                    break;
+                }
+                case 'blue':
+                {
+                    this.style.backgroundColor = 'green';
+                    break;
+                }
+                case 'green':
+                {
+                    this.style.backgroundColor = 'red';
+                    break;
+                }
+            }
+            if (k > 200)
+            {
+                k -= 5;
+                z -= 5;
+                this.style.width = k + 'px';
+                this.style.height = z + 'px';
+            }
+        })
+    </script>
+</body>
+</html>
